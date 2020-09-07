@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GADS</string>
+    <string name="supporter">supporter</string>
+    <string name="banner">banner</string>
+    <string name="logo">logo</string>
+    <string name="loader">loader</string>
+</resources>
