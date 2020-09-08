@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
             PorterDuff.Mode.SCREEN
         )
         supporters.colorFilter = screenFilter
-        logo.colorFilter = screenFilter
         banner.colorFilter = screenFilter
+        logo.colorFilter = screenFilter
+
         loader.colorFilter = screenFilter
 
         loader.setBackgroundResource(R.drawable.loader_animation)
