@@ -13,13 +13,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.loader)
         val screenFilter = PorterDuffColorFilter(
-            Color.rgb(34,34,34),
+            Color.rgb(34, 34, 34),
             PorterDuff.Mode.SCREEN
         )
         supporters.colorFilter = screenFilter
         banner.colorFilter = screenFilter
         logo.colorFilter = screenFilter
-
         loader.colorFilter = screenFilter
 
         loader.setBackgroundResource(R.drawable.loader_animation)
