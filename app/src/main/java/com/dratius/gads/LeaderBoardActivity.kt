@@ -9,16 +9,24 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.dratius.gads.ui.main.SectionsPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_leader_board.*
 
 class LeaderBoardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leader_board)
-        val sectionsPagerAdapter = SectionsPagerAdapter(this, supportFragmentManager)
-        val viewPager: ViewPager = findViewById(R.id.view_pager)
-        viewPager.adapter = sectionsPagerAdapter
-        val tabs: TabLayout = findViewById(R.id.tabs)
-        tabs.setupWithViewPager(viewPager)
+
+        TabLayoutMediator(tabs, view_pager) {tab, position ->
+            when(position) {
+                0 -> {
+                    tab.text = "Top Hours"
+                }
+                1 -> {
+                    tab.text = "Most Skilled"
+                }
+            }
+        }.attach()
     }
 }
